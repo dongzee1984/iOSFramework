@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'WYCore' target in the 'WYCore' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+
+#if ! __has_feature(objc_arc)
+#define WYAutorelease(__v) ([__v autorelease])
+
+#else
+// -fobjc-arc
+#define WYAutorelease(__v)
+
+#endif
+
+
+    #import "WYCore.h"
+
+#endif
